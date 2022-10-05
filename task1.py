@@ -5,7 +5,11 @@
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 import random
 
-newlist = [random.randint(1, 10) for i in range(10)]
+argRnd1 = int(input('Введите начальное значение случайности: '))
+argRnd2 = int(input('Введите конечное значение случайности: '))
+argRnd3 = int(input('Количество случайностей: '))
+
+newlist = [random.randint(argRnd1, argRnd2) for i in range(argRnd3)]
 sum = 0
 for i in range(len(newlist)):
     if i % 2 != 0:
